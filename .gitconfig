@@ -7,6 +7,7 @@
 	user = cheshire137
 [push]
 	default = current
+	autoSetupRemote = true
 [alias]
   co = checkout
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
@@ -51,3 +52,9 @@
 	required = true
 [init]
 	defaultBranch = main
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[credential]
+	helper = cache
+[commit]
+	gpgsign = false
