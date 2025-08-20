@@ -14,6 +14,10 @@ export SERVICEOWNERS_SKIP=1
 export RUBOCOP_SKIP=1
 export SORBET_SKIP=1
 
+if [ -d "/workspaces/github-ui" ]; then
+	export PATH="/workspaces/github-ui/node_modules/.bin:$PATH"
+fi
+
 alias gco='git checkout'
 
 killport() {
