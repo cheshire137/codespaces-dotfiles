@@ -16,3 +16,15 @@ if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bash_profile" ]; then
   # Overwrite bash profile with my own
   cp /workspaces/.codespaces/.persistedshare/dotfiles/.bash_profile ~/.bash_profile
 fi
+
+if [ -d "/workspaces/github" ]; then
+  instructions_source="/workspaces/.codespaces/.persistedshare/dotfiles/.instructions/copilot-quality-local.md"
+  instructions_target_dir="/workspaces/github/.github/instructions.local"
+  instructions_target_file="${instructions_target_dir}/copilot-quality.instructions.md"
+
+  if [ -f "$instructions_source" ]; then
+    echo "==> Copying Copilot instructions into $instructions_target_dir"
+    mkdir -p "$instructions_target_dir"
+    cp "$instructions_source" "$instructions_target_file"
+  fi
+fi
