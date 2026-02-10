@@ -13,8 +13,6 @@ applyTo: |
   **/*.yaml
   **/*.md
   **/*.go
-  **/*.css
-  **/*.scss
 ---
 
 ## Reliability guardrails
