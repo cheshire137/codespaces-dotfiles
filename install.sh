@@ -7,10 +7,16 @@ if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc" ]; then
   echo "source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'" >> ~/.bashrc
 fi
 
-if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.gitconfig" ]; then
-  # Overwrite git config with my own
-  cp /workspaces/.codespaces/.persistedshare/dotfiles/.gitconfig ~/.gitconfig
-fi
+git config --global user.name "Sarah Vessels"
+git config --global user.email "cheshire137@gmail.com"
+git config --global init.defaultBranch main
+git config --global push.default current
+git config --global push.autoSetupRemote true
+git config --global commit.gpgsign false
+git config --global alias.co checkout
+git config --global alias.cp cherry-pick
+git config --global core.editor "vim"
+
 
 if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bash_profile" ]; then
   # Overwrite bash profile with my own
