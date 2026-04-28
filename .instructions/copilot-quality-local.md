@@ -1,19 +1,4 @@
----
-description: Copilot guardrails to reduce hallucinations, misplaced edits, and context loss.
-applyTo: |
-  **/*.rb
-  **/*.rake
-  **/*.ru
-  **/*.erb
-  **/*.js
-  **/*.ts
-  **/*.tsx
-  **/*.jsx
-  **/*.yml
-  **/*.yaml
-  **/*.md
-  **/*.go
----
+# Copilot instructions
 
 ## Reliability guardrails
 
