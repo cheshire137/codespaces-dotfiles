@@ -70,3 +70,7 @@ Do not repeat previously-failed approaches unless the user explicitly asks to re
 When referencing files, always qualify them as: `repoOwner/repoName@<ref>:<path>`
 
 If multiple repositories are involved, confirm which repository a file belongs to before proposing edits.
+
+### 8) Prefer GitHub MCP over `gh`
+
+When an issue, discussion, comment, gist, pull request, project, or other content on GitHub is referenced and you need to load it, prefer the GitHub MCP server over using the `gh` command-line tool. If the GitHub MCP server is not available or running, prompt the user to start it.
