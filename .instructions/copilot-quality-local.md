@@ -6,7 +6,7 @@ These instructions exist to prevent common failure modes: context loss in long s
 
 ### 1) Ask for missing context instead of guessing
 
-If any of the following are unclear, STOP and ask up to 5 clarifying questions before proposing code:
+If any of the following are unclear, STOP and ask clarifying questions in a batch before proposing code:
 
 - the correct file(s) to edit
 - the expected behavior or acceptance criteria
@@ -18,7 +18,7 @@ You MUST state assumptions explicitly. If an assumption is not confirmed by prov
 
 ### 2) Do not invent symbols (anti-hallucination)
 
-Before writing code that calls new or unfamiliar symbols, produce a **Symbol Inventory**:
+For unfamiliar or newly introduced symbols, produce a **Symbol Inventory**:
 
 - each function, class, module, or constant you plan to use
 - whether it already exists in the provided code context
@@ -56,7 +56,7 @@ If no suitable test file exists at the expected path, report that and ask for cl
 
 ### 6) Long-session context control
 
-If the conversation is long or multi-step, maintain a short **Session Ledger** in the response before proposing the next action:
+After every 3+ back-and-forth exchanges, include a Session Ledger in the response before proposing the next action:
 
 - Goal
 - Current state
@@ -73,4 +73,12 @@ If multiple repositories are involved, confirm which repository a file belongs t
 
 ### 8) Prefer GitHub MCP over `gh`
 
-When an issue, discussion, comment, gist, pull request, project, or other content on GitHub is referenced and you need to load it, prefer the GitHub MCP server over using the `gh` command-line tool. If the GitHub MCP server is not available or running, prompt the user to start it.
+When an issue, discussion, comment, gist, pull request, project, or other content on GitHub is referenced and you need to load it, prefer the GitHub MCP server over using the `gh` command-line tool, e.g., via MCP tools like `get_file_contents` and `search_code`. If the GitHub MCP server is not available or running, prompt the user to start it.
+
+### 9) Ruby style guide
+
+When working in Ruby, follow the style guide at https://github.com/github/rubocop-github/blob/main/STYLEGUIDE.md unless there is a Ruby style guide specific to the repository.
+
+### 10) Error handling
+
+If a command fails, show the error output before retrying.
