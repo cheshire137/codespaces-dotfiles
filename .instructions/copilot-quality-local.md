@@ -10,7 +10,6 @@ These are global preferences that apply across all repositories. Per-repo files 
 - Be thorough over fast, basically 100% of the time unless I explicitly say otherwise. Take your time, do the rubber-duck pass, read the extra file.
 - If you think something would be good to add to this file, please ask me if I'd like to do so. Don't edit this file without my permission and review.
 - Prefer GitHub MCP over `gh`. When you need to load GitHub content, prefer the github MCP server over using the `gh` command-line tool, e.g., via MCP tools like `get_file_contents` and `search_code`. If the MCP server is not available or running, prompt me to start it.
-- When working in Ruby, follow the style guide at https://github.com/github/rubocop-github/blob/main/STYLEGUIDE.md unless there is a Ruby style guide specific to the repository.
 
 ## Git and pull requests
 
@@ -32,6 +31,15 @@ These are global preferences that apply across all repositories. Per-repo files 
   - Be cautious with "just", "should", or "only".
   - Emoji are welcome.
 - Never use em dashes. Prefer double hyphens, colons, or periods.
+
+## Coding style
+
+When working in Ruby, follow the style guide at https://github.com/github/rubocop-github/blob/main/STYLEGUIDE.md unless there is a Ruby style guide specific to the repository.
+
+- Use a line length of 118 characters unless the specific repository specifies a different limit.
+- Do not use a trailing conditional in Ruby if doing so causes the line to exceed the line length limit.
+- Do not use an inline conditional in JavaScript or TypeScript if doing so causes the line to exceed the line length limit.
+- In Ruby, even for destructive methods, do not name a method with `!` for a suffix unless another method of the same name exists already without the `!` suffix.
 
 ## Reliability guardrails
 
