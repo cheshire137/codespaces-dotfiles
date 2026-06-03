@@ -56,3 +56,9 @@ with_github_ui() {
 	fi
 }
 echo "Run with_github_ui to open a VS Code workspace with github-ui included."
+
+# Persist VS Code workspaceStorage / History / globalStorage across
+# Codespace restarts. Cheap, idempotent; bails out outside Codespaces.
+if [ -x "/workspaces/.codespaces/.persistedshare/dotfiles/persist-vscode-state.sh" ]; then
+  /workspaces/.codespaces/.persistedshare/dotfiles/persist-vscode-state.sh >/dev/null 2>&1 || true
+fi

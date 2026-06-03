@@ -32,3 +32,9 @@ if [ ! -f "$instructions_target_file" ] && [ -f "$instructions_source" ]; then
   mkdir -p "$instructions_target_dir"
   cp "$instructions_source" "$instructions_target_file"
 fi
+
+# Persist VS Code workspaceStorage / History / globalStorage across
+# Codespace restarts. Cheap, idempotent; bails out outside Codespaces.
+if [ -x "/workspaces/.codespaces/.persistedshare/dotfiles/persist-vscode-state.sh" ]; then
+  /workspaces/.codespaces/.persistedshare/dotfiles/persist-vscode-state.sh || true
+fi
