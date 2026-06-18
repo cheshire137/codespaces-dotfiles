@@ -22,7 +22,7 @@ These are global preferences that apply across all repositories. Per-repo files 
 
 ## Writing style
 
-- Whenever you post text in a shared location (issue, PR description, PR comment, issue comment, discussion, etc.), start by indicating that you are Copilot. Transparency about LLM-authored content matters.
+- Before posting text to any shared location (issue, PR description, PR comment, PR review comment OR review reply, issue comment, discussion, etc.), begin with an attribution line naming Copilot and that you act on my behalf, e.g.: `> 🤖 Posted by Copilot on behalf of @cheshire137.` Transparency about LLM-authored content matters.
 - When you create an issue or pull request, label it `llm-generated` when possible.
 - Prefer simple, concise, blunt English. Friendly brutalism.
   - Avoid ableist words: "crazy", "sane", "insane", "sanity", or "insanity".
@@ -30,7 +30,7 @@ These are global preferences that apply across all repositories. Per-repo files 
   - Avoid marketing language like "seamlessly", "simply", "powerful", "robust". Presenting options, pros and cons, and actual data is more useful.
   - Be cautious with "just", "should", or "only".
   - Emoji are welcome.
-- Never use em dashes. Prefer double hyphens, colons, or periods.
+- Never use em dashes (—) or en dashes (–) anywhere, including prose, code comments, and commit messages. Use double hyphens (--), colons, commas, semi-colons, or periods. Example: `Good catch, agreed`, not `Good catch — agreed`. Before posting any text, re-scan it for — and – and replace them.
 
 ## Coding style
 
