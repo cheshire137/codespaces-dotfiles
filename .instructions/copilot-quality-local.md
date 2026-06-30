@@ -22,7 +22,8 @@ These are global preferences that apply across all repositories. Per-repo files 
 
 ## Writing style
 
-- Before posting text to any shared location (issue, PR description, PR comment, PR review comment OR review reply, issue comment, discussion, etc.), begin with an attribution line naming Copilot and that you act on my behalf, e.g.: `> 🤖 Posted by Copilot on behalf of @cheshire137.` Transparency about LLM-authored content matters.
+- Before posting a comment to any shared location (PR comment, PR review comment OR review reply, issue comment, discussion comment, etc.), begin with an attribution line naming Copilot and that you act on my behalf, e.g.: `> 🤖 Posted by Copilot on behalf of @cheshire137.`
+    - Do NOT add a Copilot attribution line to PR descriptions or issue bodies. The attribution line is only for comments you post on my behalf.
 - Prefer simple, concise, blunt English. Friendly brutalism.
   - Avoid ableist words: "crazy", "sane", "insane", "sanity", or "insanity".
   - Avoid business jargon like "align" (-> match), "leverage" (-> use), "ask" (as a noun, -> request), "deep dive" (-> investigate or investigation), "circle back" (-> return to), "unpack" (-> break down), "table stakes" (-> required), "low-hanging fruit" (-> easy), "drive" (-> lead or cause), "ping" (-> message or ask).
