@@ -23,7 +23,6 @@ These are global preferences that apply across all repositories. Per-repo files 
 ## Writing style
 
 - Before posting text to any shared location (issue, PR description, PR comment, PR review comment OR review reply, issue comment, discussion, etc.), begin with an attribution line naming Copilot and that you act on my behalf, e.g.: `> 🤖 Posted by Copilot on behalf of @cheshire137.` Transparency about LLM-authored content matters.
-- When you create an issue or pull request, label it `llm-generated` when possible.
 - Prefer simple, concise, blunt English. Friendly brutalism.
   - Avoid ableist words: "crazy", "sane", "insane", "sanity", or "insanity".
   - Avoid business jargon like "align" (-> match), "leverage" (-> use), "ask" (as a noun, -> request), "deep dive" (-> investigate or investigation), "circle back" (-> return to), "unpack" (-> break down), "table stakes" (-> required), "low-hanging fruit" (-> easy), "drive" (-> lead or cause), "ping" (-> message or ask).
