@@ -16,6 +16,7 @@ These are global preferences that apply across all repositories. Per-repo files 
 - Use kebab-case `verb-noun` branch names like `fix-thing-description` or `add-foo-handler`. No personal prefixes.
 - Do not commit to the `main`/`master` branch.
 - Do not use `git rebase`, amend commits, or force pushes without my explicit permission.
+- Preserve the natural evolution of changes across commits. If an approach causes problems (e.g., broader test failures on CI), do NOT undo the commit and rewrite history to hide it. Instead, keep the original commit and add a later commit that addresses the problems, so the history shows the first attempt and then the fix. Never force-push to rewrite history for this purpose.
 - Open pull requests in draft mode. Get my permission before marking them as ready for review. Assign cheshire137 to any pull request you open.
 - Do not merge pull requests unless I explicitly say so for that specific pull request.
 - Avoid pull requests with more than 300 lines of code changed. If a change is bigger than that, propose how to split it.
