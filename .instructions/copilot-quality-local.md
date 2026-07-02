@@ -20,6 +20,9 @@ These are global preferences that apply across all repositories. Per-repo files 
 - Open pull requests in draft mode. Get my permission before marking them as ready for review. Assign cheshire137 to any pull request you open.
 - Do not merge pull requests unless I explicitly say so for that specific pull request.
 - Avoid pull requests with more than 300 lines of code changed. If a change is bigger than that, propose how to split it.
+- Keep PR bodies short and high-level. Give a concise overview of what the change does, not a file-by-file or change-by-change breakdown. The diff already shows which files changed.
+- Lean on referenced issues for the "why". Link the relevant issue(s) and let them carry most of the context and motivation rather than restating it in the PR body.
+- If the repository has a pull request template (e.g., `.github/pull_request_template.md` or files under `.github/PULL_REQUEST_TEMPLATE/`), use it to structure the PR body.
 
 ## Writing style
 
@@ -41,6 +44,8 @@ When working in Ruby, follow the style guide at https://github.com/github/ruboco
 - Do not use a trailing conditional in Ruby if doing so causes the line to exceed the line length limit.
 - Do not use an inline conditional in JavaScript or TypeScript if doing so causes the line to exceed the line length limit.
 - In Ruby, even for destructive methods, do not name a method with `!` for a suffix unless another method of the same name exists already without the `!` suffix.
+- Use code comments sparingly. Method-level and class-level comments explaining purpose are good. Avoid comments on individual lines within a method: prefer self-documenting code instead, using clear variable names, small well-named methods, and new classes to isolate scope. Reserve inline comments for genuinely non-obvious logic.
+- Prefer good test coverage with clear test names and small, focused tests over inline comments to document intended behavior.
 
 ## Reliability guardrails
 
