@@ -63,8 +63,10 @@ load_personal_skills() {
 
   echo "==> Loading personal Copilot skills from $repo"
   rm -rf "$clone_dir"
+  local basic
+  basic="$(printf 'x-access-token:%s' "$token" | base64 | tr -d '\n')"
   if ! git clone --quiet --depth 1 \
-      -c http.extraHeader="Authorization: Bearer ${token}" \
+      -c http.extraHeader="Authorization: Basic ${basic}" \
       "https://github.com/${repo}.git" "$clone_dir"; then
     echo "==> Could not clone $repo (check the AGENT_SKILLS_TOKEN secret's scope)"
     return 0
