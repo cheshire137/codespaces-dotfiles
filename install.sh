@@ -15,7 +15,11 @@ git config --global push.autoSetupRemote true
 git config --global commit.gpgsign false
 git config --global alias.co checkout
 git config --global alias.cp cherry-pick
-git config --global core.editor "vim"
+if command -v vim >/dev/null 2>&1; then
+  git config --global core.editor "vim"
+else
+  git config --global core.editor "vi"
+fi
 
 
 if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bash_profile" ]; then
