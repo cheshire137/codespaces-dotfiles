@@ -1,3 +1,9 @@
+---
+name: Personal Copilot instructions
+description: Personal development and collaboration preferences
+applyTo: "**"
+---
+
 # Copilot instructions
 
 These are global preferences that apply across all repositories. Per-repo files may add or override conventions.

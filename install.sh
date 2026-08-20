@@ -27,11 +27,11 @@ if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bash_profile" ]; then
   cp /workspaces/.codespaces/.persistedshare/dotfiles/.bash_profile ~/.bash_profile
 fi
 
-instructions_source="/workspaces/.codespaces/.persistedshare/dotfiles/.instructions/copilot-quality-local.md"
-instructions_target_dir="$HOME/.github"
-instructions_target_file="${instructions_target_dir}/copilot-instructions.md"
+instructions_source="/workspaces/.codespaces/.persistedshare/dotfiles/.instructions/copilot-quality-local.instructions.md"
+instructions_target_dir="$HOME/.copilot/instructions"
+instructions_target_file="${instructions_target_dir}/copilot-quality-local.instructions.md"
 
-if [ ! -f "$instructions_target_file" ] && [ -f "$instructions_source" ]; then
+if [ -f "$instructions_source" ]; then
   echo "==> Copying Copilot instructions into $instructions_target_file"
   mkdir -p "$instructions_target_dir"
   cp "$instructions_source" "$instructions_target_file"
