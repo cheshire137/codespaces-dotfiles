@@ -1,4 +1,8 @@
-export EDITOR=vim
+if command -v vim >/dev/null 2>&1; then
+	export EDITOR=vim
+else
+	export EDITOR=vi
+fi
 export VISUAL="$EDITOR"
 
 export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
