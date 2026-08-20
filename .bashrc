@@ -1,6 +1,5 @@
 export EDITOR=vim
 export VISUAL="$EDITOR"
-export GIT_EDITOR="vim"
 
 export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
 # Write history each command due to Codespace sometimes not flushing
