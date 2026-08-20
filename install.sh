@@ -4,7 +4,11 @@ echo "==> Running install.sh from dotfiles..."
 
 if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc" ]; then
   # Leave what's in place there but append customizations
-  echo "source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'" >> ~/.bashrc
+  bashrc_source="source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'"
+  # Avoid adding the source line again when install.sh is rerun.
+  if ! grep -Fqx "$bashrc_source" "$HOME/.bashrc" 2>/dev/null; then
+    echo "$bashrc_source" >> "$HOME/.bashrc"
+  fi
 fi
 
 git config --global user.name "Sarah Vessels"
