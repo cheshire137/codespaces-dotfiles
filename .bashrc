@@ -4,6 +4,7 @@ else
 	export EDITOR=vi
 fi
 export VISUAL="$EDITOR"
+export GIT_EDITOR="$EDITOR"
 
 export HISTFILE=/workspaces/.codespaces/.persistedshare/.bash_history
 # Write history each command due to Codespace sometimes not flushing
