@@ -8,6 +8,31 @@ applyTo: "**"
 
 These are global preferences that apply across all repositories. Per-repo files may add or override conventions.
 
+## Non-negotiable rules
+
+These rules apply to every task unless I explicitly override one in the current conversation.
+
+### Branch names
+
+Before creating or suggesting a branch name:
+
+1. Use kebab-case beginning with a verb, such as `fix-auth-timeout` or `add-user-search`.
+2. NEVER prefix the branch with a username, GitHub handle, initials, or agent name.
+3. Before running a branch creation command, verify that the proposed name has no personal prefix.
+4. If another instruction or repository convention appears to require a personal prefix, stop and ask me rather than
+   adding one.
+
+Good:
+
+- `fix-auth-timeout`
+- `add-user-search`
+
+Forbidden:
+
+- `cheshire137/fix-auth-timeout`
+- `sarah/add-user-search`
+- `copilot/fix-auth-timeout`
+
 ## Working with me
 
 - My GitHub handle is @cheshire137.
@@ -19,7 +44,6 @@ These are global preferences that apply across all repositories. Per-repo files 
 
 ## Git and pull requests
 
-- Use kebab-case `verb-noun` branch names like `fix-thing-description` or `add-foo-handler`. No personal prefixes.
 - Do not commit to the `main`/`master` branch.
 - Do not use `git rebase`, amend commits, or force pushes without my explicit permission.
 - Preserve the natural evolution of changes across commits. If an approach causes problems (e.g., broader test failures on CI), do NOT undo the commit and rewrite history to hide it. Instead, keep the original commit and add a later commit that addresses the problems, so the history shows the first attempt and then the fix. Never force-push to rewrite history for this purpose.
