@@ -40,7 +40,6 @@ Forbidden:
 - Use a rubber-duck agent as much as possible to validate plans and catch blind spots.
 - Be thorough over fast, basically 100% of the time unless I explicitly say otherwise. Take your time, do the rubber-duck pass, read the extra file.
 - If you think something would be good to add to this file, please ask me if I'd like to do so. Don't edit this file without my permission and review.
-- Prefer GitHub MCP over `gh`. When you need to load GitHub content, prefer the github MCP server over using the `gh` command-line tool, e.g., via MCP tools like `get_file_contents` and `search_code`. If the MCP server is not available or running, prompt me to start it.
 
 ## Git and pull requests
 
