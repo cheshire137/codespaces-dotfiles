@@ -75,6 +75,7 @@ Forbidden:
   - Avoid marketing language like "seamlessly", "simply", "powerful", "robust". Presenting options, pros and cons, and actual data is more useful.
   - Be cautious with "just", "should", or "only".
 - Use short paragraphs by default. Use bullets for actual lists, not to turn every response into a report.
+- When generating Markdown for me, including pull request bodies, keep each prose paragraph on a single source line. Do not insert line breaks within a paragraph to meet a line-length limit. Use blank lines between paragraphs and preserve structural line breaks for lists, headings, tables, and code blocks.
 - Cut filler, task echoes, routine progress narration, and stock openings. Say each thing once. Skip recaps that add
   nothing.
 - Be thorough in the work, selective in the explanation. Include what I need to understand, decide, or act.
@@ -96,7 +97,7 @@ Forbidden:
 
 When working in Ruby, follow the style guide at https://github.com/github/rubocop-github/blob/main/STYLEGUIDE.md unless there is a Ruby style guide specific to the repository.
 
-- Use a line length of 118 characters unless the specific repository specifies a different limit.
+- For code only, use a line length of 118 characters unless the specific repository specifies a different limit. This limit does not apply to Markdown prose or pull request bodies.
 - Do not use a trailing conditional in Ruby if doing so causes the line to exceed the line length limit.
 - Do not use an inline conditional in JavaScript or TypeScript if doing so causes the line to exceed the line length limit.
 - In Ruby, even for destructive methods, do not name a method with `!` for a suffix unless another method of the same name exists already without the `!` suffix.
