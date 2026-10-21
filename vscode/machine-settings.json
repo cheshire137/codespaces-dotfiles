@@ -1,0 +1,14 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#235093",
+    "titleBar.inactiveBackground": "#235093",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveForeground": "#ffffffcc",
+    "statusBar.background": "#235093",
+    "statusBar.foreground": "#ffffff",
+    "activityBar.background": "#235093"
+  },
+  "workbench.externalUriOpeners": {
+    "https://github.com/**": "default"
+  }
+}

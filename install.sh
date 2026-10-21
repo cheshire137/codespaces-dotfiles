@@ -2,6 +2,9 @@
 
 echo "==> Running install.sh from dotfiles..."
 
+dotfiles_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+bash "$dotfiles_dir/apply-vscode-settings.sh" || exit "$?"
+
 if [ -f "/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc" ]; then
   # Leave what's in place there but append customizations
   bashrc_source="source '/workspaces/.codespaces/.persistedshare/dotfiles/.bashrc'"
