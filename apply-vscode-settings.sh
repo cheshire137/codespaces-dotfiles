@@ -48,7 +48,7 @@ if not isinstance(incoming, dict) or not isinstance(existing, dict):
     print("==> VS Code settings must be JSON objects; leaving existing settings untouched", file=sys.stderr)
     sys.exit(1)
 
-palette = ("#235093", "#6b327c", "#17655f", "#7a3e24", "#704c12", "#7a3045", "#3f527d", "#4b5e28")
+palette = ("#651717", "#7a3045", "#7a3e24", "#704c12", "#4b5e28", "#17655f", "#3f527d", "#235093", "#611765")
 color_index = int(hashlib.sha256(codespace_name.encode()).hexdigest(), 16) % len(palette)
 color = palette[color_index]
 colors = incoming["workbench.colorCustomizations"]
